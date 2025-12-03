@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,7 +26,7 @@ body {
 .nav-links {
     display: flex;
     gap: 25px;
-    list-style: none;   /* removes dots */
+    list-style: none;
 }
 
 .nav-links a {
@@ -63,7 +63,7 @@ body {
 }
 
 .resume-btn {
-    margin-top: 35px !important; /* FIX: no overlapping */
+    margin-top: 35px;
     display: inline-block;
 }
 
@@ -197,15 +197,97 @@ h2 {
     transform: translateY(0);
 }
 
-/* RESPONSIVE */
+/* ========================================= */
+/*        FULLY FIXED MOBILE RESPONSIVE      */
+/* ========================================= */
+
 @media(max-width: 768px){
+
+    /* NAVBAR FIX */
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* HERO FIX */
     .hero-section {
         flex-direction: column;
         text-align: center;
-        padding: 70px 20px;
+        padding: 60px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 36px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
     }
 
     .hero-img img {
-        width: 250px;
+        width: 230px;
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 60px 20px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    /* SKILLS GRID FIX */
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+    }
+
+    /* PROJECTS GRID FIX */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* INPUTS FIX */
+    #contactForm input,
+    #contactForm textarea {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* SMALL MOBILES (≤480px) */
+@media(max-width: 480px){
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+    .navbar .logo {
+        font-size: 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero-img img {
+        width: 180px;
     }
 }
